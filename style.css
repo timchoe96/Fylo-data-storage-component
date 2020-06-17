@@ -11,10 +11,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 100vh;
 }
 
@@ -35,7 +33,7 @@ body .background2 {
   display: inline-block;
   height: 200px;
   width: 360px;
-  min-width: 280px;
+  min-width: 300px;
   border-radius: 10px 100px 10px 10px;
 }
 
@@ -84,7 +82,6 @@ body .background2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 200px;
   width: 64vw;
 }
 
@@ -108,7 +105,7 @@ body .background2 {
   background-color: #1d2c67;
   height: 150px;
   width: 500px;
-  min-width: 280px;
+  min-width: 300px;
   border-radius: 10px;
   margin-top: 30px;
 }
@@ -209,7 +206,7 @@ body .background2 {
   .rightComponent .bubble {
     border-radius: 10px 10px 10px 10px;
     top: 120px;
-    right: 60px;
+    right: 70px;
   }
   .rightComponent .rightContainer {
     text-align: center;
@@ -229,6 +226,11 @@ body .background2 {
     margin: 0;
     position: absolute;
     bottom: 0;
+  }
+  .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
