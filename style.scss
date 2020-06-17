@@ -1,0 +1,192 @@
+$iconBackground :hsl(229, 57%, 11%);
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    background-color:$iconBackground;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height:100vh;
+    .background1{
+        width:100vw;
+        height:50vh;
+        position:absolute;
+        bottom:0;
+        z-index:-1;
+    }
+    .background2{
+        display:none;
+    }
+}
+
+
+.leftComponent{
+    background-color:hsl(228, 56%, 26%);
+    display: inline-block;
+    height:200px;
+    width:360px;
+    min-width:280px;
+    border-radius:10px 100px 10px 10px;
+        .leftComponentsContainer{
+        margin-top:40px;
+        margin-left:40px;
+        display:inline-block;
+            .icons{
+                display:flex;
+                justify-content:space-between;
+                margin-top:30px;
+                width:180px;
+                &>div{
+                    background-color:$iconBackground;
+                    width:50px;
+                    height:50px;
+                    border-radius:5px;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items: center;
+    height:200px;
+    width: 64vw;
+}
+
+.rightComponent{
+    position:relative;
+    display:flex;
+    align-items:center;
+    align-self: flex-end;
+    justify-content:center;
+    font-family:'Raleway',sans-serif;
+    font-weight:400;
+    font-size:14px;
+    color:white;
+    background-color:hsl(228, 56%, 26%);;
+    height:150px;
+    width:500px;
+    min-width:280px;
+    border-radius:10px;
+    margin-top:30px;
+    .rightContainer{
+        p{
+        margin-top:10px;
+        }
+        height:100px;
+        width:80%;
+        .bar{
+            background:$iconBackground;
+            height:15px;
+            margin: 10px 0;
+            border-radius:10px;
+            display:flex;
+            align-items: center;
+            width: 100%;
+            .gradientBar{
+                width:70%;
+                height:10px;
+                margin-left: 2px;
+                border-radius:10px;
+                background:linear-gradient(to right,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+                
+                .circle{
+                    height:9px;
+                    background-color:white;
+                    width:9px;
+                    margin-left:auto;
+                    margin-right:1px;
+                    border-radius:50%;
+                }
+            }
+        }
+        .flexContainer{
+            display:flex;
+            justify-content: space-between;
+        }
+        
+    }
+    .bubble{
+        height:60px;
+        width:150px;
+        background-color:white;
+        position:absolute;
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-family:'Raleway',sans-serif;
+        font-weight: 700;
+        font-size:38px;
+        border-radius:10px 10px 0 10px;
+        color:black;
+        top:-40px;
+        right:50px;
+        .p2{
+            font-weight:400;
+            font-size:10px;
+        }
+        
+    }
+    &::before{
+        content:'';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top:10px;
+        right:50px;
+        border: 15px solid;
+        border-color:  white white transparent transparent;
+    }
+}
+
+@media only screen and (max-width:375px){
+.rightComponent{
+    &::before{
+        border-color:transparent
+    }
+    .bubble{
+        border-radius:10px 10px 10px 10px;
+        top:120px;
+        right:60px;
+    }
+    .rightContainer{
+        text-align: center;
+        font-size: 12px;
+        p{
+            margin-top: 0;
+        }
+    }
+   
+}
+body{
+    .background1{
+        display:none;
+    }
+    .background2{
+        display:inherit;
+        z-index:-1;
+        height:100vh;
+        width:100vw;
+        margin:0;
+        position:absolute;
+        bottom:0;
+    }
+}
+
+}
+
+
+
+
+
